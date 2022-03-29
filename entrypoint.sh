@@ -1,5 +1,5 @@
 #! /bin/bash
-
+find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
 set -e
 
 if [ -z "$SERVICE_ACCOUNT" ]; then
